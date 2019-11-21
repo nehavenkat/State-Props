@@ -1,18 +1,22 @@
 import React, { Component } from 'react';
-import SingleBook from '../Components/SingleBook';
-import Book from '../Book/BooksFantasy.json';
+import { Row, Col, Container } from 'reactstrap';
+
+import Book from '../Book/BooksFantasy.json'
+import SingleBook from './SingleBook.jsx';
 
 class BookList extends Component {
-    
+
     render() {
-    let bookList = Book.map(B =>
-        {
-            return(<SingleBook img={B.img} title={B.title} price={B.price}/>)
-        }) 
+
+        let bookList = Book.map(B => {
+            return(<SingleBook colWidth="col-6" img={B.img} title={B.title} price={B.price}/>)
+        });
         return (
-            <div>
+            <Container>
+            <Row>
             {bookList}    
-            </div>
+            </Row>
+            </Container>
         );
     }
 }

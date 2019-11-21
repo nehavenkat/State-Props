@@ -4,18 +4,18 @@ import { Col, Row ,Card, CardImg, CardTitle, CardBody, CardSubtitle, Button } fr
 class SingleBook extends Component {
     render() {
         return (
-            <Row>
-                <Col className="col-3">
-                    <Card>
-                        <CardImg className="images" object src={this.props.img} top width="100%" />
-                        <CardBody>
-                            <CardTitle>{this.props.title}</CardTitle>
-                            <CardSubtitle className="price">{this.props.price}€</CardSubtitle>
-                            <Button color="danger">Buy now</Button>
-                        </CardBody>
-                    </Card>
-                    </Col>
-                    </Row>
+            <Col className={this.props.colWidth}>
+                <Card>
+                    <CardImg className="images" object src={this.props.img} top width="100%" />
+                    <CardBody>
+                        <CardTitle>{this.props.title}</CardTitle>
+                        <div className="price-box">
+                            <div className="price">{this.props.price}€</div>
+                            <div><Button color="danger">Buy now</Button></div>
+                        </div>
+                    </CardBody>
+                </Card>
+            </Col>
             )
         }
     
