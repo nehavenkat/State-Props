@@ -5,7 +5,7 @@ class SingleBook extends Component {
     render() {
         return (
             <Col className={this.props.colWidth}>
-                <Card>
+                <Card id={this.props.id}>
                     <CardImg className="images" object src={this.props.img} top width="100%" />
                     <CardBody>
                         <CardTitle>{this.props.title}</CardTitle>

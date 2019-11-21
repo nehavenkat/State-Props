@@ -17,7 +17,7 @@ class FilterBookList extends React.Component {
         let bookList = Book.filter((book)=>{
             return book.title.toLowerCase().indexOf(this.state.searchString.toLowerCase()) >= 0;
         }).map(B => {
-            return(<SingleBook colWidth="col-4" img={B.img} title={B.title} price={B.price} />)
+            return(<SingleBook colWidth="col-4" img={B.img} title={B.title} price={B.price} id={B.asin} />)
         });
         return (
             <Container className="mt-2">

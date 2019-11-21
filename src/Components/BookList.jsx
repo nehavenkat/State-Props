@@ -9,7 +9,7 @@ class BookList extends Component {
     render() {
 
         let bookList = Book.map(B => {
-            return(<SingleBook colWidth="col-6" img={B.img} title={B.title} price={B.price}/>)
+            return(<SingleBook colWidth="col-6" img={B.img} title={B.title} price={B.price} id={B.asin}/>)
         });
         return (
             <Container>
